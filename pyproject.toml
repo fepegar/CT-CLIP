@@ -2,10 +2,28 @@
 name = "ct-clip-project"
 version = "0.1.0"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "ct_clip",
+    "transformer_maskgit",
+]
+
+[tool.uv.sources]
+ct_clip = { workspace = true }
+transformer_maskgit = { workspace = true }
 
 [tool.uv.workspace]
 members = [
     "packages/CT_CLIP",
     "packages/transformer_maskgit",
 ]
+
+[dependency-groups]
+dev = [
+    "huggingface-hub[cli]>=0.28.1",
+    "ipykernel>=6.29.5",
+    "ipywidgets>=8.1.5",
+]
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"

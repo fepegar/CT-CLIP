@@ -1,25 +1,16 @@
 from pathlib import Path
-from shutil import rmtree
 from transformer_maskgit.optimizer import get_optimizer
-from transformers import BertTokenizer, BertModel
-
-from eval import evaluate_internal, plot_roc, accuracy, sigmoid, bootstrap, compute_cis
-
-from sklearn.metrics import classification_report, confusion_matrix, multilabel_confusion_matrix, f1_score, accuracy_score
+from transformers import BertTokenizer
 
 import torch
 from torch import nn
-from torch.utils.data import Dataset, DataLoader, random_split
-from torch.utils.data.distributed import DistributedSampler
+from torch.utils.data import DataLoader
 
-from data_inference_nii import CTReportDatasetinfer
-#from data_external_valid import CTReportDatasetinfer
+from data_inference import CTReportDatasetinfer
 import numpy as np
 import tqdm
 import pandas as pd
 
-from einops import rearrange
-import accelerate
 from accelerate import Accelerator
 from accelerate import DistributedDataParallelKwargs
 import math

@@ -1,9 +1,8 @@
-import torch
+import sys
 from transformer_maskgit import CTViT
 from transformers import BertTokenizer, BertModel
 from ct_clip import CTCLIP
 from zero_shot import CTClipInference
-import accelerate
 
 tokenizer = BertTokenizer.from_pretrained('microsoft/BiomedVLP-CXR-BERT-specialized',do_lower_case=True)
 text_encoder = BertModel.from_pretrained("microsoft/BiomedVLP-CXR-BERT-specialized")
@@ -36,7 +35,8 @@ clip = CTCLIP(
 
 )
 
-clip.load("path_to_pretrained_model")
+path_to_pretrained_model = sys.argv[1]
+clip.load(path_to_pretrained_model)
 
 inference = CTClipInference(
     clip,

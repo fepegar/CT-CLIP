@@ -14,7 +14,7 @@ dependencies = [
     "matplotlib",
     "seaborn",
     "wilds",
-    "ImageNetV2_pytorch @ git+https://github.com/modestyachts/ImageNetV2_pytorch.git",
+    "ImageNetV2_pytorch",
     "click",
     "appdirs",
     "attr",
@@ -24,3 +24,6 @@ dependencies = [
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.uv.sources]
+ImageNetV2_pytorch = { git = "https://github.com/modestyachts/ImageNetV2_pytorch" }
