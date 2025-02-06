@@ -1,0 +1,26 @@
+[project]
+name = "transformer-maskgit"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "accelerate",
+    "beartype",
+    "einops>=0.6",
+    "ema-pytorch>=0.2.2",
+    "opencv-python",
+    "pillow",
+    "numpy",
+    "sentencepiece",
+    "torch",
+    "torchtyping",
+    "torchvision",
+    "transformers",
+    "tqdm",
+    "vector-quantize-pytorch==1.1.2",
+    "nibabel",
+    "openpyxl",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
