@@ -16,7 +16,7 @@ dependencies = [
     "torchvision",
     "transformers",
     "tqdm",
-    "vector-quantize-pytorch==1.1.2",
+    "vector-quantize-pytorch",
     "nibabel",
     "openpyxl",
 ]
