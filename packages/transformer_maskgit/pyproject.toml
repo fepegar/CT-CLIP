@@ -7,7 +7,7 @@ dependencies = [
     "beartype",
     "einops>=0.6",
     "ema-pytorch>=0.2.2",
-    "opencv-python",
+    "opencv-python-headless",
     "pillow",
     "numpy",
     "sentencepiece",
